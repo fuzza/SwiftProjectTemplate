@@ -1,10 +1,40 @@
-disabled_rules: # rule identifiers to exclude from running
+included:
+  - Sources
+  - Tests
+excluded:
+  - Carthage
+
+disabled_rules:
   - trailing_whitespace
-excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Pods
-type_body_length:
-  - 400 # 300 by default warning
-  - 400 # error
+
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - conditional_returns_on_newline
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - file_header
+  - first_where
+  - force_unwrapping
+  - nimble_operator
+  - number_separator
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - switch_case_on_newline
+
 file_length:
-  warning: 1200 # 500 by default
-  error: 1200
+  warning: 150
+  error: 200
+
+function_body_length:
+  warning: 30
+  error: 50
+
+line_length:
+  warning: 100
+  error: 120
